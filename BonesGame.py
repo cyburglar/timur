@@ -1,5 +1,9 @@
+from Bone import Bone
+
 b = "Boanes game"
 
 print (b)
 
-# начало работы. 
+bone1 = Bone()
+
+print (bone1.throw())
