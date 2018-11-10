@@ -1,6 +1,6 @@
 from Bone import Bone
 
-b = "Boanes game"
+b = "Bones game"
 
 print (b)
 
