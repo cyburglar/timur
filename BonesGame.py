@@ -1,35 +1,38 @@
 from Bone import Bone
 
-b = "Bones game"
 
-print (b)
-
-bones = [Bone(), Bone(), Bone(), Bone(), Bone()]
-
-for x in bones:
-    print (x.throw())
-
-# Зачем тебе три стакана? Если достаточно создать один и бросить его три раза?
-# Или по аналогии с костями ... создать массив из трех стаканов
 class Glass:
-    value = 0
-    def __init__(self, contains, throw):
-        self.contains = [Bone(), Bone(), Bone(), Bone(), Bone()]
-        self.throw = throw
+    value = []
+    def __init__(self):
+        self.bones = [Bone(), Bone(), Bone(), Bone(), Bone()]
+    def throw(self):
+        z = []
+        for x in self.bones:
+            z.append(x.throw())
+        return z
+    def remove(self, x):
+        del self.bones[0:x]
 
-class Glass1:
-    value = 0
-    def __init__(self, contains, throw):
-        self.contains = [Bone(), Bone(), Bone(), Bone(), Bone()]
-        self.throw = throw
+class Yahtzee:
+    board = {}
+    board["1"] = []
+    board["2"] = []
+    board["3"] = []
+    board["4"] = []
+    board["5"] = []
+    board["6"] = []
+    def oneTurn (self):
+        glass = Glass()
+        x = glass.throw()
+        for y in x :
+            print (y)
 
-class Glass2:
-    value = 0
-    def __init__(self, contains, throw):
-        self.contains = [Bone(), Bone(), Bone(), Bone(), Bone()]
-        self.throw = throw
 
 
 
 
+
+if __name__== '__main__':
+    x = Yahtzee()
+    x.oneTurn()
 
