@@ -3,15 +3,20 @@ from Bone import Bone
 
 class Glass:
     value = []
+
     def __init__(self):
         self.bones = [Bone(), Bone(), Bone(), Bone(), Bone()]
-    def throw(self):
+
+    def throw(self, bonesLeft = 5):
         z = []
-        for x in self.bones:
+        #Выбор из 5 или оставшихся костей
+        for x in self.bones[0:bonesLeft]:
             z.append(x.throw())
         return z
+
     def remove(self, x):
         del self.bones[0:x]
+
 
 class Yahtzee:
     board = {}
@@ -21,32 +26,17 @@ class Yahtzee:
     board["4"] = []
     board["5"] = []
     board["6"] = []
-    def oneTurn (self):
+
+    def turn(self, bonesLeft = 5):
+        #бросаешь имено столько сколько в bonesLeft
         glass = Glass()
-        x = glass.throw()
-        # здесть должна быть логика
-        # три броска ... каждый раз быбираешь кубики ... после 3-х ты должен заполнить один из board
-        for y in x :
+        x = glass.throw(bonesLeft)
+        for y in x:
             print (y)
-            list.pop([y]) # QUESTION, sam dobavil, rezultata net
-        oneTurn (self) = list(set(glass)) - set([x]) # tut namudril
+        return x
 
 
-
-if __name__== '__main__':   #4to takoe ==
+if __name__ == '__main__':  # 4to takoe ==
     x = Yahtzee()
-    x.oneTurn()
-remove_element = 1
-if remove_element in list:
-    lst.pop(lst.index(remove_element)) # to 4to nashel v nete, ne sovsem ponjal 4to delal
-
-
-
-
-
-
-
-
-
-
-
+    bones = x.turn()
+    #здесь отсортировать и выбрать совподающие числа ... остальные перебросить.
