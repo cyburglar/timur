@@ -24,6 +24,8 @@ class Yahtzee:
     def oneTurn (self):
         glass = Glass()
         x = glass.throw()
+        # здесть должна быть логика
+        # три броска ... каждый раз быбираешь кубики ... после 3-х ты должен заполнить один из board
         for y in x :
             print (y)
             list.pop([y]) # QUESTION, sam dobavil, rezultata net
