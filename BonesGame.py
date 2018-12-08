@@ -34,6 +34,8 @@ class Yahtzee:
         for y in x:
             print (y)
         return x
+    def fill(self, number, amount):
+        #board[number] += amount;
 
 
 if __name__ == '__main__':  # 4to takoe ==
