@@ -26,13 +26,25 @@ class Yahtzee:
         x = glass.throw()
         for y in x :
             print (y)
+            list.pop([y]) # QUESTION, sam dobavil, rezultata net
+        oneTurn (self) = list(set(glass)) - set([x]) # tut namudril
 
 
 
-
-
-
-if __name__== '__main__':
+if __name__== '__main__':   #4to takoe ==
     x = Yahtzee()
     x.oneTurn()
+remove_element = 1
+if remove_element in list:
+    lst.pop(lst.index(remove_element)) # to 4to nashel v nete, ne sovsem ponjal 4to delal
+
+
+
+
+
+
+
+
+
+
 
